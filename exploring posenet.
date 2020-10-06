@@ -1,0 +1,71 @@
+// RUNWAYML
+// www.runwayml.com
+// original example by Anastasis Germanidis, adapted by George Profenza
+
+import com.runwayml.*;
+RunwayHTTP runway;
+JSONObject data;
+PImage eye;
+PImage smile;
+
+void setup() {
+  size(600, 400);
+  eye = loadImage("eye.png");
+  smile = loadImage("smile.png");
+  runway = new RunwayHTTP(this);
+  
+}
+
+void draw() {
+  background(0);
+  //ModelUtils.drawPoseParts(data, g, 10);
+  draw_poses();
+}
+
+void runwayDataEvent(JSONObject runwayData) {
+  data = runwayData;
+}
+
+void draw_poses() {
+  if (data != null) {
+    JSONArray poses = data.getJSONArray("poses");
+    print(poses);
+
+    for (int i = 0; i < poses.size(); i ++) {
+      //poses[i] :: poses.getJSONArray(i)
+      JSONArray the_pose = poses.getJSONArray(i);
+
+      // nose 
+      JSONArray nose = the_pose.getJSONArray(0);
+      float x = nose.getFloat(0)*width;
+      float y = nose.getFloat(0)*height;
+      fill(200, 0, 0);
+      ellipse(x, y, 30, 30);
+      
+      // left eye 
+      JSONArray leye = the_pose.getJSONArray(1);
+      float xeye = leye.getFloat(0)*width;
+      float yeye = leye.getFloat(1)*height;
+      image(eye, xeye, yeye, 40, 40);
+      
+      // right eye
+      JSONArray reye = the_pose.getJSONArray(2);
+      float eyex = reye.getFloat(0)*width;
+      float eyey = reye.getFloat(1)*height;
+      fill (255, 0, 255);
+      image(eye, eyex, eyey, 40, 40);
+      
+      // smile
+      JSONArray smiles = the_pose.getJSONArray(0);
+      float smilex = smiles.getFloat(0)*width - 10 ;
+      float smiley = smiles.getFloat(1)*height + 60;
+      image(smile, smilex, smiley, 70, 60);
+     
+    }
+  }
+}
+
+void keyPressed() {
+    //print(data);
+    draw_poses();
+  }
