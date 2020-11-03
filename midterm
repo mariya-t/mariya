@@ -1,0 +1,64 @@
+// RUNWAYML
+// www.runwayml.com
+// original example by Anastasis Germanidis, adapted by George Profenza
+
+import com.runwayml.*;
+RunwayHTTP runway;
+JSONObject data;
+PImage wheel;
+PImage drumstick;
+
+void setup() {
+  size(600, 400);
+  wheel = loadImage("wheel.png");
+  drumstick = loadImage("drumsticks.png");
+  runway = new RunwayHTTP(this);
+}
+
+void draw() {
+  background(255);
+  //ModelUtils.drawPoseParts(data, g, 10);
+  draw_poses();
+}
+
+void runwayDataEvent(JSONObject runwayData) {
+  data = runwayData;
+}
+
+void draw_poses() {
+  if (data != null) {
+    JSONArray poses = data.getJSONArray("poses");
+
+
+    for (int i = 0; i < poses.size(); i ++) {
+      //poses[i] :: poses.getJSONArray(i)
+      JSONArray the_pose = poses.getJSONArray(i);
+      for (int j = 0; j <the_pose.size(); j++) {
+        JSONArray point = the_pose.getJSONArray(j);
+        float x = point.getFloat(0)*width;
+        float y = point.getFloat(1)*height;
+        if (j==0) {
+          image(wheel, x-180, y-180, 500, 500) ;
+        }
+
+        if (j==9) {
+          image(drumstick, x, y, 70, 70) ;
+        }
+        if (j==10) {
+          image(drumstick, x, y, 70, 70) ;
+        }
+        if (j==15) {
+          image(drumstick, x, y, 70, 70) ;
+        }
+        if (j==16) {
+          image(drumstick, x, y, 70, 70) ;
+        }
+      }
+    }
+  }
+}
+
+void keyPressed() {
+  //print(data);
+  draw_poses();
+}
