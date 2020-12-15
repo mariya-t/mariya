@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programming Web Design | Summer 2019</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<h1 class="title">Artificial Intelligence Arts <br> Course Portfolio</h1>
+		<h3 class="subtitle">Fall 2020.</h3>
+	</div>
+	<div class="main">
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/09/25/week-1-research-a-project/" target="_blank"><span class="arrow">></span>Case Study 01</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/09/26/exploring-runway/" target="_blank"><span class="arrow">></span>Case Study 02</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/10/06/posenet-basics/" target="_blank"><span class="arrow">></span>Case Study 03</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/10/11/are-artificial-neural-networks-inspired-by-the-brain-neuron-structure/" target="_blank"><span class="arrow">></span>Research Report</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/10/27/ai-midterm-ideas/" target="_blank"><span class="arrow">></span>Midterm Ideas</a></p>
+    <p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/11/03/midterm-project-in-progress/" target="_blank"><span class="arrow">></span>Midterm</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/11/09/deepdream/" target="_blank"><span class="arrow">></span>Case Study 04</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/11/17/neural-style-transfer/" target="_blank"><span class="arrow">></span>Case Study 05</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/11/22/gan/" target="_blank"><span class="arrow">></span>Case Study 06</a></p>
+		<p class="weblink"><a onmouseover="this.children[0].style.display = 'inline'" onmouseout="this.children[0].style.display = 'none'" class="weblink-a" href="https://wp.nyu.edu/nyushanghai-mariya/2020/12/15/indexing-ai-portfolio/" target="_blank"><span class="arrow">></span>Final</a></p>
+
+	</div>
+
+	<div class="nav">
+			<p class="nav-item"><a class="nav-link" href="https://wp.nyu.edu/shanghai-ima-aiarts" target="_blank">Course Website</a> <a class="nav-link" href="https://github.com/aaaven/aiarts2020online" target="_blank">Github</a></p> 			
+
+	</div>
+</body>
+</html>
+
